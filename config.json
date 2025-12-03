@@ -1,0 +1,12 @@
+{
+    "database": {
+        "dbname": "ZfKD_OMOP",
+        "user": "user",
+        "password": "password",
+        "host": "host",
+        "port": 5432
+    },
+    "xml_input": false,
+    "iam_path_zfkd_data": "/workspaces/zfkd_omop/src/data"
+}
+
