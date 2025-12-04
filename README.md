@@ -38,11 +38,7 @@ Before running the analysis, please complete the following preparation steps to 
 
 ### Preparation
 1. ZfKD XML data must be converted to CSV to serve as input for our ETL pipeline. If your Data is in ZfKD XML format, change in config.json param "xml_input" to true. Optionally, the input csv tables can be preprocessed using the pipeline by Germer et al. (see references). Recommended use for suitable data quality!
-2. Specify the path to the input ZfKD data file(s) in config.json (param: "path_zfkd_data"). The following files are required: 
-
-ZfKD.xml or 
-
-patient.csv, tumor.csv, op.csv, systemtherapie.csv, strahlentherapie.csv, and fe.csv. Columns in these tables need to be comma-separated.
+2. Specify the path to the input ZfKD data file(s) in config.json (param: "path_zfkd_data"). The following file(s) are required: ZfKD.xml or csv files (patient.csv, tumor.csv, op.csv, systemtherapie.csv, strahlentherapie.csv, fe.csv). Columns in these csv tables need to be comma-separated.
 3. The OMOP CDM will be stored in a PostgreSQL database. Therefore, you first need to create a PostgreSQL database. The connection parameters are defined in the config.json file.
 > Note: Before running the analysis, update the values in config.json to match your database settings and source folder of ZfKD data.
 4. Metadata from Athena, required for mapping progress, is regularly updated and stored in the University of Hamburg’s data repository (Jasmin Carus, & Mareile Beernink. (2025). ZfKD | OMOP CDM - Metadata Cataloge (Version 2) [Data set]. http://doi.org/10.25592/uhhfdm.17924). Please download the metadata from the University of Hamburg’s data repository and place the files in the src/stage folder.<br>**Required files**: concept.csv, concept_ancestor.csv, concept_class.csv, concept_relationship.csv, concept_synonym.csv, domain.csv, meta.csv, relationship.csv, vocabulary.csv
