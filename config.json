@@ -7,6 +7,6 @@
         "port": 5432
     },
     "xml_input": false,
-    "iam_path_zfkd_data": "/workspaces/zfkd_omop/src/data"
+    "path_zfkd_data": "/workspaces/zfkd-omop-core/src/data"
 }
 

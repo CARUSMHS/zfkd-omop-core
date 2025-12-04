@@ -495,4 +495,4 @@ def parse_file(xml_filename):
 
 
 if __name__ == "__main__":
-    parse_file(glob.glob(os.path.join(imp.load_config('iam_path_zfkd_data'), "*.xml"))[0])
+    parse_file(glob.glob(os.path.join(imp.load_config('path_zfkd_data'), "*.xml"))[0])

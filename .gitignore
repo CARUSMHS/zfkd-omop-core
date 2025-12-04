@@ -2,7 +2,7 @@
 src/stage/*
 src/data/*
 
-##workspace/zfkd_omop/.devcontainer/devcontainer.json
+##workspace/zfkd-omop-core/.devcontainer/devcontainer.json
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

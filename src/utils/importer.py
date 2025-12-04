@@ -9,15 +9,15 @@ from sqlalchemy import text
 from typing import List
 import logging
 
-# -> normal python run: /workspaces/zfkd_omop
-# -> debugging: /workspaces/zfkd_omop/src
+# -> normal python run: /workspaces/zfkd-omop-core
+# -> debugging: /workspaces/zfkd-omop-core/src
 
 def load_config(section=None):
     """loading confuguration information for this etl-worker"""
     
     config_file = os.path.join("config.json")
     # for debugging
-    # config_file = os.path.join("/workspaces/zfkd_omop/config.json")
+    # config_file = os.path.join("/workspaces/zfkd-omop-core/config.json")
     
     with open(config_file, 'r', encoding='utf-8') as file:
         config = json.load(file)
@@ -30,7 +30,7 @@ def csv_importer(*args,**kwargs):
         """
         Read all .csv data of a folder 
         """ 
-        folder_path = load_config('iam_path_zfkd_data')
+        folder_path = load_config('path_zfkd_data')
         possible_files = [
             'patient.csv', 'tumor.csv', 'fe.csv', 'op.csv', 'systemtherapie.csv',
             'strahlentherapie.csv', 'modul_mamma.csv' 'systemtherapie_with_substance_service_variable.csv', 

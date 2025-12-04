@@ -99,7 +99,7 @@ update_progress_bar(progress, "Done: Metadata in DB")
 # (2) data source import
 if imp.load_config('xml_input'):
     xp.parse_file(
-        glob.glob(os.path.join(imp.load_config('iam_path_zfkd_data'), "*.xml"))[0]
+        glob.glob(os.path.join(imp.load_config('path_zfkd_data'), "*.xml"))[0]
     )
 
 required_input_tables = ['patient', 'tumor', 'op', 'systemtherapie', 'strahlentherapie', 'fe']
@@ -155,7 +155,7 @@ update_progress_bar(progress, "Done: Measurement Table in DB")
 observation.create_observation_table(patient, tumor, systemtherapie, person_stage, mappings_stage, meta_stage)
 update_progress_bar(progress, "Done: Observation Table in DB")
 
-sql_path_oncoFinder = os.path.join("/workspaces/zfkd_omop/src/sql/onco_regimen_finder.sql")
+sql_path_oncoFinder = os.path.join("/workspaces/zfkd-omop-core/src/sql/onco_regimen_finder.sql")
 imp.run_sql_file(sql_path_oncoFinder, connections_params)
 update_progress_bar(progress, "Done: Onco_regimen_finder executed in DB")
 
